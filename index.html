@@ -42,7 +42,7 @@ header{padding:0}
 .hero-portrait{width:100%;max-width:470px;margin-left:auto}
 .portrait{position:relative;display:grid;place-items:center;aspect-ratio:.78;overflow:hidden;background:linear-gradient(145deg,#d7d2ca,#f5f0e8 62%,#c9bfb2);border-radius:7px;box-shadow:0 18px 45px rgba(65,47,31,.14)}
 .portrait::after{position:absolute;inset:0;border:1px solid rgba(255,255,255,.5);content:"";pointer-events:none}
-.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%;transform:scale(1.2);transform-origin:center 28%}
 .portrait-fallback{color:var(--ac);font:400 clamp(76px,11vw,132px)/1 "Mr Dafoe",cursive;opacity:.82}
 .cap{margin:10px 0 0;text-align:center;color:var(--mut);font:600 10px/1.4 "Fraunces",Georgia,serif;letter-spacing:.14em;text-transform:uppercase}
 .btn{display:inline-block;padding:10px 18px;border-radius:8px;border:1px solid var(--ac);background:var(--ac);color:var(--bg);text-decoration:none;font-weight:600;margin:0 8px 8px 0}
@@ -89,7 +89,7 @@ footer{background:var(--chrome);border-top:2px solid var(--bd);padding:56px 0 24
 @media(max-width:760px){.ftop{grid-template-columns:1fr;gap:30px}.fcards{grid-template-columns:repeat(2,minmax(0,1fr))}.foot{flex-wrap:wrap}}
 @media(max-width:440px){.fcards{grid-template-columns:1fr}.foot{display:grid;gap:6px}}
 @media(max-width:760px){.w{padding:0 24px}.hero{grid-template-columns:minmax(0,1fr) minmax(220px,.8fr);gap:32px}.sig{font-size:clamp(52px,9vw,74px)}.about{grid-template-columns:minmax(190px,.8fr) minmax(0,1.2fr);gap:32px}.cols{gap:18px}}
-@media(max-width:560px){.w{padding:0 20px}nav .w{height:auto;min-height:56px;gap:8px}nav b{font-size:13px}nav a{margin-left:8px;font-size:12px}.theme-toggle{margin-left:8px;width:32px;height:32px}.hero{grid-template-columns:1fr;gap:28px;padding:38px 0 40px}.sig{font-size:clamp(64px,16vw,88px)}.hero-portrait{width:min(100%,390px);margin:0 auto}.portrait{aspect-ratio:.9}.about{grid-template-columns:1fr;gap:24px}.frame{width:min(100%,360px);margin:auto}.about .portrait{aspect-ratio:.9}.cols{grid-template-columns:1fr;gap:14px}section{padding:40px 0}}
+@media(max-width:560px){.w{padding:0 20px}nav .w{height:auto;min-height:56px;gap:8px}nav b{font-size:13px}nav a{margin-left:8px;font-size:12px}.theme-toggle{margin-left:8px;width:32px;height:32px}.hero{grid-template-columns:1fr;gap:28px;padding:38px 0 40px}.sig{font-size:clamp(64px,16vw,88px)}.hero-portrait{width:min(100%,390px);margin:0 auto}.portrait{aspect-ratio:.9}.portrait img{transform:scale(1.12)}.about{grid-template-columns:1fr;gap:24px}.frame{width:min(100%,360px);margin:auto}.about .portrait{aspect-ratio:.9}.cols{grid-template-columns:1fr;gap:14px}section{padding:40px 0}}
 </style>
 </head>
 <body id="top">
@@ -99,16 +99,16 @@ footer{background:var(--chrome);border-top:2px solid var(--bd);padding:56px 0 24
 <div class="hero-copy">
 <p class="spread"><b>P</b><b>O</b><b>R</b><b>T</b><b>F</b><b>O</b><b>L</b><b>I</b><b>O</b></p>
 <h1 class="sig" aria-label="Edward Nicholas Adidjaja"><span class="a">Edward</span><span class="b">Nicholas Adidjaja</span></h1>
-<p class="role">Computer Science student at Bina Nusantara University <i>|</i> Web, machine learning &amp; computer vision</p>
+<p class="role">Computer Science student at Bina Nusantara University Alam Sutera<i>|</i> Web, machine learning &amp; computer vision</p>
 <div class="status"><span class="beacon"><i></i></span><div class="txt"><span class="tagline">Open to opportunities</span><b>Internships and project collaborations</b><small>Currently studying Computer Science at BINUS University</small></div></div>
 </div>
-<div class="hero-portrait"><div class="portrait"><span class="portrait-fallback" aria-hidden="true">EN</span><img src="https://github.com/Edward-NA.png" alt="Edward Nicholas Adidjaja" onerror="this.remove()"></div><p class="cap">Tangerang, Banten, Indonesia</p></div>
+<div class="hero-portrait"><div class="portrait"><span class="portrait-fallback" aria-hidden="true">EN</span><img src="image/image.jpeg" alt="Edward Nicholas Adidjaja" onerror="this.remove()"></div><p class="cap">Tangerang, Banten, Indonesia</p></div>
 </div></div></header>
 
 <section id="tentang"><div class="w">
 <p class="label">About</p>
 <div class="about">
-<div class="frame"><div class="portrait"><span class="portrait-fallback" aria-hidden="true">EN</span><img src="https://github.com/Edward-NA.png" alt="Edward Nicholas Adidjaja" onerror="this.remove()"></div></div>
+<div class="frame"><div class="portrait"><span class="portrait-fallback" aria-hidden="true">EN</span><img src="image/image.jpeg" alt="Edward Nicholas Adidjaja" onerror="this.remove()"></div></div>
 <div class="abouttext">
 <p class="statement">Saya mahasiswa Computer Science di Bina Nusantara University dengan minat pada <em>pengembangan web</em>, machine learning, dan computer vision. Saya senang mengubah ide menjadi pengalaman digital yang jelas, bermanfaat, dan mudah digunakan.</p>
 <div class="cols"><p>Melalui proyek kuliah dan kerja kelompok, saya mengembangkan aplikasi frontend dan backend, membangun alur web, serta menguji fitur dari sudut pandang pengguna.</p><p>Saya juga mengeksplorasi klasifikasi citra dengan deep learning dan computer vision, serta menerapkan NLP untuk analisis sentimen. Berikut beberapa teknologi yang sering saya gunakan:</p></div>
