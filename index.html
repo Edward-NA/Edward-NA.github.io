@@ -6,8 +6,8 @@
 <title>Edward Nicholas Adidjaja | Portofolio</title>
 <meta name="description" content="Portofolio Edward Nicholas Adidjaja, mahasiswa Computer Science Bina Nusantara University.">
 <style>
-:root{--bg:#fafaf7;--fg:#1c1c1a;--mut:#63635c;--card:#fff;--chrome:#e8f1ef;--bd:#e4e3dc;--ac:#0f766e}
-:root[data-theme="dark"]{--bg:#121413;--fg:#ecece6;--mut:#a3a39a;--card:#1a1d1c;--chrome:#1b2927;--bd:#2c302e;--ac:#5eead4}
+:root{--bg:#fafaf7;--fg:#1c1c1a;--mut:#63635c;--card:#fff;--chrome:#cfe3df;--bd:#e4e3dc;--ac:#0f766e}
+:root[data-theme="dark"]{--bg:#121413;--fg:#ecece6;--mut:#a3a39a;--card:#1a1d1c;--chrome:#203b36;--bd:#2c302e;--ac:#5eead4}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
@@ -36,6 +36,9 @@ h2{font-size:26px;margin:0 0 20px}
 .links a{font-size:14px;margin-right:14px;font-weight:600}
 .role{font-size:13px;color:var(--ac);margin-bottom:8px}
 footer{background:var(--chrome);border-top:2px solid var(--bd);padding:28px 0;color:var(--mut);font-size:14px}
+.footer-title{color:var(--fg);font-weight:700;margin-bottom:10px}
+.footer-contacts{display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:18px}
+.footer-contacts a{color:var(--fg);font-size:14px}
 </style>
 </head>
 <body>
@@ -111,7 +114,16 @@ footer{background:var(--chrome);border-top:2px solid var(--bd);padding:28px 0;co
 <p>LinkedIn: <a href="https://www.linkedin.com/in/edward-nicholas-adidjaja-7ba439322/" target="_blank" rel="noopener">linkedin.com/in/edward-nicholas-adidjaja-7ba439322</a></p>
 </div></section>
 
-<footer><div class="w">© 2026 Edward Nicholas Adidjaja</div></footer>
+<footer><div class="w">
+<div class="footer-title">Contact</div>
+<div class="footer-contacts">
+<a href="https://github.com/Edward-NA" target="_blank" rel="noopener">GitHub</a>
+<a href="https://wa.me/6281285415919" target="_blank" rel="noopener">WhatsApp</a>
+<a href="mailto:enadidjaja@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/edward-nicholas-adidjaja-7ba439322/" target="_blank" rel="noopener">LinkedIn</a>
+</div>
+<div>© 2026 Edward Nicholas Adidjaja</div>
+</div></footer>
 <script>
 const themeToggle = document.querySelector('.theme-toggle');
 const themeIcon = document.querySelector('.theme-icon');
