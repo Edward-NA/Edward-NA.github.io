@@ -50,13 +50,8 @@ header{padding:0}
 section{padding:52px 0}
 h2{font:600 30px/1.2 "Fraunces",Georgia,serif;margin:0 0 20px}
 .label{margin:0 0 24px;color:var(--ac);font:700 14px/1.2 "Fraunces",Georgia,serif;letter-spacing:.22em;text-shadow:0 0 12px color-mix(in srgb,var(--ac) 28%,transparent);text-transform:uppercase}
-.about{display:grid;grid-template-columns:minmax(220px,.72fr) minmax(0,1.28fr);align-items:center;gap:64px}
-.frame{position:relative;max-width:400px;padding:10px}
-.frame::before,.frame::after{position:absolute;width:40px;height:40px;border-color:var(--ac);content:"";opacity:.7}
-.frame::before{top:0;left:0;border-top:1px solid;border-left:1px solid}
-.frame::after{right:0;bottom:0;border-right:1px solid;border-bottom:1px solid}
-.about .portrait{aspect-ratio:.76;border-radius:2px;box-shadow:none}
-.abouttext{min-width:0}
+.about{display:block}
+.abouttext{width:100%}
 .statement{margin:0;color:var(--fg);font:400 clamp(19px,2.2vw,25px)/1.52 "Source Serif 4",Georgia,serif}
 .statement em{color:var(--ac)}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:24px;color:var(--mut);font-size:14px;line-height:1.65}
@@ -88,8 +83,8 @@ footer{background:var(--chrome);border-top:2px solid var(--bd);padding:56px 0 24
 .foot{display:flex;justify-content:space-between;gap:16px;padding-top:22px;color:var(--mut);font-size:12px}
 @media(max-width:760px){.ftop{grid-template-columns:1fr;gap:30px}.fcards{grid-template-columns:repeat(2,minmax(0,1fr))}.foot{flex-wrap:wrap}}
 @media(max-width:440px){.fcards{grid-template-columns:1fr}.foot{display:grid;gap:6px}}
-@media(max-width:760px){.w{padding:0 24px}.hero{grid-template-columns:minmax(0,1fr) minmax(220px,.8fr);gap:32px}.sig{font-size:clamp(42px,6vw,58px)}.about{grid-template-columns:minmax(190px,.8fr) minmax(0,1.2fr);gap:32px}.cols{gap:18px}}
-@media(max-width:560px){.w{padding:0 20px}nav .w{height:auto;min-height:56px;gap:8px}nav b{font-size:13px}nav a{margin-left:8px;font-size:12px}.theme-toggle{margin-left:8px;width:32px;height:32px}.hero{grid-template-columns:1fr;gap:28px;padding:38px 0 40px}.sig{font-size:clamp(44px,11vw,60px)}.spread{font-size:15px}.hero-portrait{width:min(100%,390px);margin:0 auto}.portrait{aspect-ratio:.9}.portrait img{transform:scale(1.12)}.about{grid-template-columns:1fr;gap:24px}.frame{width:min(100%,360px);margin:auto}.about .portrait{aspect-ratio:.9}.cols{grid-template-columns:1fr;gap:14px}section{padding:40px 0}}
+@media(max-width:760px){.w{padding:0 24px}.hero{grid-template-columns:minmax(0,1fr) minmax(220px,.8fr);gap:32px}.sig{font-size:clamp(42px,6vw,58px)}.cols{gap:18px}}
+@media(max-width:560px){.w{padding:0 20px}nav .w{height:auto;min-height:56px;gap:8px}nav b{font-size:13px}nav a{margin-left:8px;font-size:12px}.theme-toggle{margin-left:8px;width:32px;height:32px}.hero{grid-template-columns:1fr;gap:28px;padding:38px 0 40px}.sig{font-size:clamp(44px,11vw,60px)}.spread{font-size:15px}.hero-portrait{width:min(100%,390px);margin:0 auto}.portrait{aspect-ratio:.9}.portrait img{transform:scale(1.12)}.cols{grid-template-columns:1fr;gap:14px}section{padding:40px 0}}
 </style>
 </head>
 <body id="top">
@@ -108,10 +103,9 @@ footer{background:var(--chrome);border-top:2px solid var(--bd);padding:56px 0 24
 <section id="tentang"><div class="w">
 <p class="label">About</p>
 <div class="about">
-<div class="frame"><div class="portrait"><span class="portrait-fallback" aria-hidden="true">EN</span><img src="image/image.jpeg" alt="Edward Nicholas Adidjaja" onerror="this.remove()"></div></div>
 <div class="abouttext">
-<p class="statement">Saya mahasiswa Computer Science di Bina Nusantara University dengan minat pada <em>pengembangan web</em>, machine learning, dan computer vision. Saya senang mengubah ide menjadi pengalaman digital yang jelas, bermanfaat, dan mudah digunakan.</p>
-<div class="cols"><p>Melalui proyek kuliah dan kerja kelompok, saya mengembangkan aplikasi frontend dan backend, membangun alur web, serta menguji fitur dari sudut pandang pengguna.</p><p>Saya juga mengeksplorasi klasifikasi citra dengan deep learning dan computer vision, serta menerapkan NLP untuk analisis sentimen. Berikut beberapa teknologi yang sering saya gunakan:</p></div>
+<p class="statement">I’m a Computer Science student at Bina Nusantara University with interests in <em>web development</em>, machine learning, and computer vision. I enjoy turning ideas into clear, useful digital experiences that are easy to navigate.</p>
+<div class="cols"><p>Through coursework and team projects, I’ve built frontend and backend applications, shaped web user flows, and tested features from the perspective of the people using them.</p><p>I also explore deep-learning image classification and computer vision, and have applied natural language processing to sentiment analysis. Some of the technologies I use include:</p></div>
 <div class="tags"><span>Python</span><span>Flask</span><span>OpenCV</span><span>TensorFlow</span><span>scikit-learn</span><span>HTML/CSS/JS</span><span>PHP &amp; MySQL</span><span>Streamlit</span></div>
 </div>
 </div>
