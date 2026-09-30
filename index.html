@@ -18,7 +18,7 @@ nav .w{display:flex;justify-content:space-between;align-items:center;height:56px
 nav b{font-weight:700}
 nav a{margin-left:18px;text-decoration:none;color:var(--mut);font-size:14px}
 nav a:hover{color:var(--ac)}
-.theme-toggle{margin-left:18px;padding:6px 10px;border:1px solid var(--bd);border-radius:6px;background:var(--card);color:var(--fg);font:inherit;font-size:13px;cursor:pointer}
+.theme-toggle{margin-left:18px;width:36px;height:36px;padding:0;border:1px solid var(--bd);border-radius:50%;background:var(--card);color:var(--fg);font:inherit;font-size:18px;line-height:1;cursor:pointer}
 .theme-toggle:hover{border-color:var(--ac);color:var(--ac)}
 header{padding:72px 0 48px}
 h1{font-size:clamp(32px,6vw,52px);line-height:1.15;margin:0 0 12px}
@@ -39,7 +39,7 @@ footer{border-top:1px solid var(--bd);padding:28px 0;color:var(--mut);font-size:
 </style>
 </head>
 <body>
-<nav><div class="w"><b>Edward N.A.</b><div><a href="#tentang">About</a><a href="#proyek">Proyek</a><a href="#kontak">Kontak</a><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">Dark mode</button></div></div></nav>
+<nav><div class="w"><b>Edward N.A.</b><div><a href="#tentang">About</a><a href="#proyek">Proyek</a><a href="#kontak">Kontak</a><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><span class="theme-icon" aria-hidden="true">☾</span></button></div></div></nav>
 
 <header><div class="w">
 <h1>Hi, i'm Edward Nicholas Adidjaja.</h1>
@@ -114,6 +114,7 @@ footer{border-top:1px solid var(--bd);padding:28px 0;color:var(--mut);font-size:
 <footer><div class="w">© 2026 Edward Nicholas Adidjaja</div></footer>
 <script>
 const themeToggle = document.querySelector('.theme-toggle');
+const themeIcon = document.querySelector('.theme-icon');
 const savedTheme = localStorage.getItem('theme');
 const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 const currentTheme = savedTheme || systemTheme;
@@ -122,8 +123,10 @@ document.documentElement.dataset.theme = currentTheme;
 
 function updateThemeToggle() {
 	const isDark = document.documentElement.dataset.theme === 'dark';
-	themeToggle.textContent = isDark ? 'Light mode' : 'Dark mode';
-	themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+	const label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+	themeIcon.textContent = isDark ? '☀' : '☾';
+	themeToggle.setAttribute('aria-label', label);
+	themeToggle.setAttribute('title', label);
 	themeToggle.setAttribute('aria-pressed', String(isDark));
 }
 
