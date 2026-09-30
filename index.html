@@ -7,7 +7,7 @@
 <meta name="description" content="Portofolio Edward Nicholas Adidjaja, mahasiswa Computer Science Bina Nusantara University.">
 <style>
 :root{--bg:#fafaf7;--fg:#1c1c1a;--mut:#63635c;--card:#fff;--bd:#e4e3dc;--ac:#0f766e}
-@media(prefers-color-scheme:dark){:root{--bg:#121413;--fg:#ecece6;--mut:#a3a39a;--card:#1a1d1c;--bd:#2c302e;--ac:#5eead4}}
+:root[data-theme="dark"]{--bg:#121413;--fg:#ecece6;--mut:#a3a39a;--card:#1a1d1c;--bd:#2c302e;--ac:#5eead4}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
@@ -18,6 +18,8 @@ nav .w{display:flex;justify-content:space-between;align-items:center;height:56px
 nav b{font-weight:700}
 nav a{margin-left:18px;text-decoration:none;color:var(--mut);font-size:14px}
 nav a:hover{color:var(--ac)}
+.theme-toggle{margin-left:18px;padding:6px 10px;border:1px solid var(--bd);border-radius:6px;background:var(--card);color:var(--fg);font:inherit;font-size:13px;cursor:pointer}
+.theme-toggle:hover{border-color:var(--ac);color:var(--ac)}
 header{padding:72px 0 48px}
 h1{font-size:clamp(32px,6vw,52px);line-height:1.15;margin:0 0 12px}
 .lead{color:var(--mut);font-size:18px;max-width:600px;margin:0 0 24px}
@@ -37,7 +39,7 @@ footer{border-top:1px solid var(--bd);padding:28px 0;color:var(--mut);font-size:
 </style>
 </head>
 <body>
-<nav><div class="w"><b>Edward N.A.</b><div><a href="#tentang">About</a><a href="#proyek">Proyek</a><a href="#kontak">Kontak</a></div></div></nav>
+<nav><div class="w"><b>Edward N.A.</b><div><a href="#tentang">About</a><a href="#proyek">Proyek</a><a href="#kontak">Kontak</a><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">Dark mode</button></div></div></nav>
 
 <header><div class="w">
 <h1>Hi, i'm Edward Nicholas Adidjaja.</h1>
@@ -110,5 +112,28 @@ footer{border-top:1px solid var(--bd);padding:28px 0;color:var(--mut);font-size:
 </div></section>
 
 <footer><div class="w">© 2026 Edward Nicholas Adidjaja</div></footer>
+<script>
+const themeToggle = document.querySelector('.theme-toggle');
+const savedTheme = localStorage.getItem('theme');
+const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+const currentTheme = savedTheme || systemTheme;
+
+document.documentElement.dataset.theme = currentTheme;
+
+function updateThemeToggle() {
+	const isDark = document.documentElement.dataset.theme === 'dark';
+	themeToggle.textContent = isDark ? 'Light mode' : 'Dark mode';
+	themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+	themeToggle.setAttribute('aria-pressed', String(isDark));
+}
+
+updateThemeToggle();
+themeToggle.addEventListener('click', () => {
+	const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+	document.documentElement.dataset.theme = nextTheme;
+	localStorage.setItem('theme', nextTheme);
+	updateThemeToggle();
+});
+</script>
 </body>
 </html>
