@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Edward Nicholas Adidjaja | Portofolio</title>
+<meta name="description" content="Portofolio Edward Nicholas Adidjaja, mahasiswa Computer Science Bina Nusantara University.">
+<style>
+:root{--bg:#fafaf7;--fg:#1c1c1a;--mut:#63635c;--card:#fff;--bd:#e4e3dc;--ac:#0f766e}
+@media(prefers-color-scheme:dark){:root{--bg:#121413;--fg:#ecece6;--mut:#a3a39a;--card:#1a1d1c;--bd:#2c302e;--ac:#5eead4}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--ac)}
+.w{max-width:960px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--bd);z-index:5}
+nav .w{display:flex;justify-content:space-between;align-items:center;height:56px}
+nav b{font-weight:700}
+nav a{margin-left:18px;text-decoration:none;color:var(--mut);font-size:14px}
+nav a:hover{color:var(--ac)}
+header{padding:72px 0 48px}
+h1{font-size:clamp(32px,6vw,52px);line-height:1.15;margin:0 0 12px}
+.lead{color:var(--mut);font-size:18px;max-width:600px;margin:0 0 24px}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;border:1px solid var(--ac);background:var(--ac);color:var(--bg);text-decoration:none;font-weight:600;margin:0 8px 8px 0}
+.btn.o{background:none;color:var(--ac)}
+section{padding:40px 0}
+h2{font-size:26px;margin:0 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:20px;display:flex;flex-direction:column}
+.card h3{margin:0 0 6px;font-size:19px}
+.card p{margin:0 0 12px;color:var(--mut);font-size:15px;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.tags span{font-size:12px;padding:2px 9px;border-radius:99px;border:1px solid var(--bd);color:var(--mut)}
+.links a{font-size:14px;margin-right:14px;font-weight:600}
+.role{font-size:13px;color:var(--ac);margin-bottom:8px}
+footer{border-top:1px solid var(--bd);padding:28px 0;color:var(--mut);font-size:14px}
+</style>
+</head>
+<body>
+<nav><div class="w"><b>Edward N.A.</b><div><a href="#tentang">Tentang</a><a href="#proyek">Proyek</a><a href="#kontak">Kontak</a></div></div></nav>
+
+<header><div class="w">
+<h1>Halo, saya Edward Nicholas Adidjaja.</h1>
+<p class="lead">Mahasiswa Computer Science di Bina Nusantara University. Saya mengerjakan proyek web, machine learning, dan computer vision.</p>
+<a class="btn" href="#proyek">Lihat proyek</a>
+<a class="btn o" href="https://github.com/Edward-NA" target="_blank" rel="noopener">GitHub</a>
+</div></header>
+
+<section id="tentang"><div class="w">
+<h2>Tentang</h2>
+<p>Saya mahasiswa Computer Science di Bina Nusantara University. Lewat tugas kuliah dan proyek kelompok, saya mengerjakan pengembangan web (frontend dan backend), klasifikasi citra dengan deep learning, computer vision, serta penelitian NLP. Halaman ini merangkum proyek-proyek yang ada di GitHub saya.</p>
+<div class="tags">
+<span>Python</span><span>Flask</span><span>OpenCV</span><span>TensorFlow</span><span>scikit-learn</span><span>HTML/CSS/JS</span><span>PHP &amp; MySQL</span><span>Streamlit</span>
+</div>
+</div></section>
+
+<section id="proyek"><div class="w">
+<h2>Proyek</h2>
+<div class="grid">
+
+<article class="card">
+<h3>SkinningAI</h3>
+<div class="role">Proyek kelompok (3 orang) · UI, frontend, backend</div>
+<p>Aplikasi web untuk mengunggah foto kulit dan mendapatkan prediksi kondisi kulit beserta deskripsi dan saran. Memakai EfficientNetB0 dengan transfer learning, akurasi uji 77,51% pada 7 kelas dataset kulit Indonesia.</p>
+<div class="tags"><span>Flask</span><span>EfficientNetB0</span><span>Deep Learning</span></div>
+<div class="links"><a href="https://github.com/Edward-NA/SkinningAI" target="_blank" rel="noopener">Repository</a></div>
+</article>
+
+<article class="card">
+<h3>Traffic Vehicle Detection</h3>
+<div class="role">Proyek kelompok (4 orang) · proposal &amp; implementasi</div>
+<p>Deteksi dan pelacakan kendaraan pada video lalu lintas dengan background subtraction MOG2, lalu memperkirakan durasi lampu hijau dari jumlah kendaraan. Dibandingkan dengan SVM + HOG dan YOLOv8.</p>
+<div class="tags"><span>OpenCV</span><span>MOG2</span><span>SVM + HOG</span><span>YOLOv8</span></div>
+<div class="links"><a href="https://github.com/Edward-NA/traffic-detection-mog2-CV-main" target="_blank" rel="noopener">Repository</a></div>
+</article>
+
+<article class="card">
+<h3>Bitcoin Sentiment Analysis</h3>
+<div class="role">Proyek kelompok · NLP</div>
+<p>Studi komparatif Naive Bayes, Logistic Regression, dan DistilBERT untuk sentimen tweet Bitcoin. DistilBERT hasil fine-tuning mencapai F1-macro 98,20%, dengan aplikasi Streamlit untuk prediksi langsung.</p>
+<div class="tags"><span>DistilBERT</span><span>PyTorch</span><span>Streamlit</span></div>
+<div class="links"><a href="https://github.com/Edward-NA/bitcoin-sentiment-app" target="_blank" rel="noopener">Repository</a><a href="https://huggingface.co/spaces/KevinKagusman/bitcoin-sentiment" target="_blank" rel="noopener">Demo</a></div>
+</article>
+
+<article class="card">
+<h3>B' Helpful</h3>
+<div class="role">Proyek kelompok (5 orang) · QA Tester</div>
+<p>Prototipe platform volunteering yang menghubungkan Event Organizer dengan relawan sekaligus membantu mahasiswa memantau jam Community Service. Dibuat untuk proposal PKM-KC 2026.</p>
+<div class="tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>Black-box testing</span></div>
+<div class="links"><a href="https://github.com/Edward-NA/Bhelpful" target="_blank" rel="noopener">Repository</a></div>
+</article>
+
+<article class="card">
+<h3>VSTravel</h3>
+<div class="role">Tugas lab Human-Computer Interaction</div>
+<p>Website biro perjalanan multi-halaman untuk destinasi Indonesia, dengan navigasi responsif, filter destinasi berdasarkan wilayah, kategori, dan rating, serta validasi form di sisi klien.</p>
+<div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+<div class="links"><a href="https://github.com/Edward-NA/VSTravel" target="_blank" rel="noopener">Repository</a></div>
+</article>
+
+</div>
+</div></section>
+
+<section id="kontak"><div class="w">
+<h2>Kontak</h2>
+<p>Temui saya dan lihat kode lengkap proyek di GitHub.</p>
+<a class="btn" href="https://github.com/Edward-NA" target="_blank" rel="noopener">github.com/Edward-NA</a>
+</div></section>
+
+<footer><div class="w">© 2026 Edward Nicholas Adidjaja</div></footer>
+</body>
+</html>
