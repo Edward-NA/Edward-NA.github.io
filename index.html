@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Mr+Dafoe&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#eef3fc;--fg:#17213a;--mut:#50617f;--card:#fff;--chrome:#e3ebf8;--bd:#d2def0;--ac:#285de0;--accent-deep:#111c38}
-:root[data-theme="dark"]{--bg:#111827;--fg:#e8edf8;--mut:#abb8d1;--card:#192337;--chrome:#1b2940;--bd:#2d3c57;--ac:#83a6ff;--accent-deep:#e8edf8}
+:root{--bg:#f2f0ec;--fg:#292622;--mut:#716a60;--card:#fffdfa;--chrome:#e3ded6;--bd:#d5cec3;--ac:#a94732;--gold:#ad813b;--accent-deep:#3d3028}
+:root[data-theme="dark"]{--bg:#191816;--fg:#f1ece4;--mut:#b8ad9e;--card:#24211d;--chrome:#302b24;--bd:#4a4034;--ac:#e28b65;--gold:#d5ad66;--accent-deep:#f1ece4}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 "Source Serif 4",Georgia,serif}
@@ -32,18 +32,18 @@ header{padding:0}
 .sig .b{color:var(--accent-deep)}
 .role{max-width:540px;margin:0 0 24px;color:var(--fg);font:600 16px/1.55 "Fraunces",Georgia,serif}
 .role i{padding:0 4px;color:var(--ac);font-style:normal}
-.status{display:flex;align-items:center;gap:13px;max-width:470px;padding:14px 18px;border:1px solid var(--bd);border-left:3px solid #36c98a;border-radius:10px;background:var(--card);box-shadow:0 12px 24px rgba(26,47,83,.09)}
-.beacon{display:grid;place-items:center;flex:0 0 18px;width:18px;height:18px;border:1px solid #36c98a;border-radius:50%}
-.beacon i{width:8px;height:8px;border-radius:50%;background:#36c98a}
+.status{display:flex;align-items:center;gap:13px;max-width:470px;padding:14px 18px;border:1px solid var(--bd);border-left:3px solid var(--gold);border-radius:10px;background:var(--card);box-shadow:0 12px 24px rgba(65,47,31,.1)}
+.beacon{display:grid;place-items:center;flex:0 0 18px;width:18px;height:18px;border:1px solid var(--gold);border-radius:50%}
+.beacon i{width:8px;height:8px;border-radius:50%;background:var(--gold)}
 .status .txt{display:grid;line-height:1.35}
-.tagline{color:#189d67;font:700 10px/1.4 "Fraunces",Georgia,serif;letter-spacing:.16em;text-transform:uppercase}
+.tagline{color:var(--ac);font:700 10px/1.4 "Fraunces",Georgia,serif;letter-spacing:.16em;text-transform:uppercase}
 .status b{font:600 13px/1.4 "Fraunces",Georgia,serif;color:var(--fg)}
 .status small{color:var(--mut);font-size:11px}
-.hero-portrait{max-width:390px;margin-left:auto}
-.portrait{position:relative;display:grid;place-items:center;aspect-ratio: .78;overflow:hidden;background:linear-gradient(145deg,#dce6f5,#f8f5f3 62%,#cddaf0);border-radius:7px;box-shadow:0 18px 45px rgba(25,43,75,.12)}
+.hero-portrait{width:100%;max-width:470px;margin-left:auto}
+.portrait{position:relative;display:grid;place-items:center;aspect-ratio:.78;overflow:hidden;background:linear-gradient(145deg,#d7d2ca,#f5f0e8 62%,#c9bfb2);border-radius:7px;box-shadow:0 18px 45px rgba(65,47,31,.14)}
 .portrait::after{position:absolute;inset:0;border:1px solid rgba(255,255,255,.5);content:"";pointer-events:none}
 .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%}
-.portrait-fallback{color:#285de0;font:400 clamp(76px,11vw,132px)/1 "Mr Dafoe",cursive;opacity:.82}
+.portrait-fallback{color:var(--ac);font:400 clamp(76px,11vw,132px)/1 "Mr Dafoe",cursive;opacity:.82}
 .cap{margin:10px 0 0;text-align:center;color:var(--mut);font:600 10px/1.4 "Fraunces",Georgia,serif;letter-spacing:.14em;text-transform:uppercase}
 .btn{display:inline-block;padding:10px 18px;border-radius:8px;border:1px solid var(--ac);background:var(--ac);color:var(--bg);text-decoration:none;font-weight:600;margin:0 8px 8px 0}
 .btn.o{background:none;color:var(--ac)}
@@ -51,7 +51,7 @@ section{padding:52px 0}
 h2{font:600 30px/1.2 "Fraunces",Georgia,serif;margin:0 0 20px}
 .label{margin:0 0 24px;color:var(--ac);font:700 14px/1.2 "Fraunces",Georgia,serif;letter-spacing:.22em;text-shadow:0 0 12px color-mix(in srgb,var(--ac) 28%,transparent);text-transform:uppercase}
 .about{display:grid;grid-template-columns:minmax(220px,.72fr) minmax(0,1.28fr);align-items:center;gap:64px}
-.frame{position:relative;max-width:360px;padding:10px}
+.frame{position:relative;max-width:400px;padding:10px}
 .frame::before,.frame::after{position:absolute;width:40px;height:40px;border-color:var(--ac);content:"";opacity:.7}
 .frame::before{top:0;left:0;border-top:1px solid;border-left:1px solid}
 .frame::after{right:0;bottom:0;border-right:1px solid;border-bottom:1px solid}
@@ -89,7 +89,7 @@ footer{background:var(--chrome);border-top:2px solid var(--bd);padding:56px 0 24
 @media(max-width:760px){.ftop{grid-template-columns:1fr;gap:30px}.fcards{grid-template-columns:repeat(2,minmax(0,1fr))}.foot{flex-wrap:wrap}}
 @media(max-width:440px){.fcards{grid-template-columns:1fr}.foot{display:grid;gap:6px}}
 @media(max-width:760px){.w{padding:0 24px}.hero{grid-template-columns:minmax(0,1fr) minmax(220px,.8fr);gap:32px}.sig{font-size:clamp(52px,9vw,74px)}.about{grid-template-columns:minmax(190px,.8fr) minmax(0,1.2fr);gap:32px}.cols{gap:18px}}
-@media(max-width:560px){.w{padding:0 20px}nav .w{height:auto;min-height:56px;gap:8px}nav b{font-size:13px}nav a{margin-left:8px;font-size:12px}.theme-toggle{margin-left:8px;width:32px;height:32px}.hero{grid-template-columns:1fr;gap:28px;padding:38px 0 40px}.sig{font-size:clamp(64px,16vw,88px)}.hero-portrait{width:min(100%,340px);margin:0 auto}.portrait{aspect-ratio:.9}.about{grid-template-columns:1fr;gap:24px}.frame{width:min(100%,330px);margin:auto}.about .portrait{aspect-ratio:.9}.cols{grid-template-columns:1fr;gap:14px}section{padding:40px 0}}
+@media(max-width:560px){.w{padding:0 20px}nav .w{height:auto;min-height:56px;gap:8px}nav b{font-size:13px}nav a{margin-left:8px;font-size:12px}.theme-toggle{margin-left:8px;width:32px;height:32px}.hero{grid-template-columns:1fr;gap:28px;padding:38px 0 40px}.sig{font-size:clamp(64px,16vw,88px)}.hero-portrait{width:min(100%,390px);margin:0 auto}.portrait{aspect-ratio:.9}.about{grid-template-columns:1fr;gap:24px}.frame{width:min(100%,360px);margin:auto}.about .portrait{aspect-ratio:.9}.cols{grid-template-columns:1fr;gap:14px}section{padding:40px 0}}
 </style>
 </head>
 <body id="top">
