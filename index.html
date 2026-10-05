@@ -56,6 +56,25 @@ h2{font:600 30px/1.2 "Fraunces",Georgia,serif;margin:0 0 20px}
 .about{display:block}
 .abouttext{width:100%}
 .statement{margin:0;color:var(--fg);font:400 clamp(19px,2.2vw,25px)/1.52 "Source Serif 4",Georgia,serif}
+.edu-wrap{padding-top:8px}
+.edu-label{margin:0 0 12px;color:var(--ac);font:700 32px/1.1 "Space Grotesk",sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.edu-title{margin:0 0 18px;color:var(--fg);font:700 clamp(26px,3vw,34px)/1.15 "Space Grotesk",sans-serif}
+.edu-card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:18px;}
+.edu-main{display:flex;align-items:center;gap:16px;flex:1;min-width:0}
+.edu-logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,#f7efe7,#e2d9cf);display:grid;place-items:center;border:1px solid var(--bd);overflow:hidden;flex:0 0 auto}
+.edu-logo img{width:100%;height:100%;object-fit:cover;display:block}
+.edu-name{font:700 28px/1.15 "Space Grotesk",sans-serif;color:var(--fg);margin:0 0 4px}
+.edu-sub{font:500 16px/1.3 "Source Serif 4",Georgia,serif;color:var(--mut);margin:0}
+.edu-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.edu-chip{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border:1px solid var(--bd);border-radius:999px;background:rgba(255,255,255,.08);color:var(--fg);font:500 13px/1.2 "Source Serif 4",Georgia,serif}
+.edu-chip svg{flex:0 0 auto}
+.edu-state{position:relative;display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--ac);box-shadow:0 0 0 3px rgba(169,71,50,.18)}
+.edu-loc{display:flex;align-items:center;gap:12px;min-width:200px;padding:12px 14px;border:1px solid var(--bd);border-radius:12px;background:var(--card);text-decoration:none;color:inherit}
+.edu-pin{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#0f2a9f,#2f68ff);display:grid;place-items:center;color:#fff;flex:0 0 auto}
+.edu-loc small{display:block;color:var(--mut);font:700 11px/1.2 "Space Grotesk",sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.edu-loc b{display:block;color:var(--fg);font:600 15px/1.3 "Source Serif 4",Georgia,serif}
+@media(max-width:860px){.edu-card{flex-direction:column;align-items:flex-start}.edu-loc{width:100%;min-width:0}} 
+@media(max-width:560px){.edu-name{font-size:22px}.edu-meta{display:grid;grid-template-columns:1fr;gap:8px}.edu-chip{justify-content:flex-start}} 
 .statement em{color:var(--ac)}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:24px;color:var(--mut);font-size:14px;line-height:1.65}
 .cols p{margin:0}
@@ -123,35 +142,25 @@ footer{background:var(--chrome);border-top:2px solid var(--bd);padding:56px 0 24
 </div>
 </div></section>
 
-<section id="background"><div class="w">
-<p class="capabilities-heading">Background</p>
-<h2 class="capabilities-sub">Education</h2>
-<div class="education-card" style="background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:18px;">
-<div style="display:flex;align-items:center;gap:16px;">
-<div style="width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,#f7efe7,#e2d9cf);display:grid;place-items:center;border:1px solid var(--bd);overflow:hidden;padding:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.3);">
-<div style="width:100%;height:100%;display:grid;place-items:center;position:relative;background:linear-gradient(135deg,#0e1d87,#f8b52b);border-radius:10px;overflow:hidden;">
-<div style="position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.7),transparent 28%);"></div>
-<div style="position:relative;width:20px;height:20px;border-radius:50%;border:3px solid #fff;display:grid;place-items:center;box-shadow:0 0 0 2px rgba(255,255,255,.2);">
-<div style="width:8px;height:8px;border-radius:50%;background:#fff;display:block;"></div>
-</div>
-</div>
-</div>
+<section id="background" class="edu-wrap"><div class="w">
+<p class="edu-label">Background</p>
+<h2 class="edu-title">Education</h2>
+<div class="edu-card">
+<div class="edu-main">
+<div class="edu-logo"><img src="image/binus.png" alt="BINUS University logo" onerror="this.style.display='none';this.parentElement.innerHTML='BINUS';" /></div>
 <div>
-<div style="font:700 28px/1.15 'Space Grotesk',sans-serif;color:var(--fg);margin:0 0 4px;">BINUS University</div>
-<div style="font:500 16px/1.3 'Source Serif 4',Georgia,serif;color:var(--mut);">Undergraduate Student</div>
+<div class="edu-name">BINUS University</div>
+<p class="edu-sub">Undergraduate Student</p>
+<div class="edu-meta">
+<span class="edu-chip"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>Aug 2024 - Present<span class="edu-state" aria-hidden="true"></span></span>
+<span class="edu-chip">Computer Science | AI Streaming</span>
 </div>
 </div>
-<div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:flex-end;">
-<div style="display:flex;align-items:center;gap:8px;color:var(--fg);font:500 15px/1.3 'Source Serif 4',Georgia,serif;"><span style="width:14px;height:14px;border-radius:4px;border:1px solid var(--bd);display:inline-block;background:var(--card);position:relative;"><span style="position:absolute;inset:3px;border-radius:2px;background:var(--ac);"></span></span> Aug 2024 - Present</div>
-<div style="color:var(--fg);font:500 15px/1.3 'Source Serif 4',Georgia,serif;">Computer Science | AI Streaming</div>
 </div>
-<div style="min-width:180px;padding:12px 14px;border:1px solid var(--bd);border-radius:12px;background:var(--card);display:flex;align-items:center;gap:10px;">
-<div style="width:24px;height:24px;border-radius:8px;background:linear-gradient(135deg,#1c4ed8,#4a7cf3);display:grid;place-items:center;color:#fff;font-size:12px;font-weight:700;">◎</div>
-<div>
-<div style="font:700 11px/1.2 'Space Grotesk',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);">Location</div>
-<div style="font:600 15px/1.3 'Source Serif 4',Georgia,serif;color:var(--fg);">BINUS Alam Sutera</div>
-</div>
-</div>
+<a class="edu-loc" href="https://www.google.com/maps/search/?api=1&query=BINUS+University+Alam+Sutera" target="_blank" rel="noopener">
+<span class="edu-pin"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+<span><small>Location</small><b>BINUS Alam Sutera</b></span>
+</a>
 </div>
 </div></section>
 
