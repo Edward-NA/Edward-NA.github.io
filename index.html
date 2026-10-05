@@ -32,13 +32,16 @@ header{padding:0}
 .sig .b{color:var(--accent-deep)}
 .role{max-width:540px;margin:0 0 24px;color:var(--fg);font:600 16px/1.55 "Fraunces",Georgia,serif}
 .role i{padding:0 4px;color:var(--ac);font-style:normal}
-.status{display:flex;align-items:center;gap:13px;max-width:470px;padding:14px 18px;border:1px solid var(--bd);border-left:3px solid var(--gold);border-radius:10px;background:var(--card);box-shadow:0 12px 24px rgba(65,47,31,.1)}
-.beacon{display:grid;place-items:center;flex:0 0 18px;width:18px;height:18px;border:1px solid var(--gold);border-radius:50%}
-.beacon i{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.status{display:flex;align-items:center;gap:13px;max-width:470px;padding:14px 18px;border:1px solid var(--bd);border-left:3px solid var(--gold);border-radius:10px;background:var(--card);box-shadow:0 12px 24px rgba(65,47,31,.1);animation:statusIn .8s cubic-bezier(.22,1,.36,1) both}
+.beacon{display:grid;place-items:center;flex:0 0 18px;width:18px;height:18px;border:1px solid var(--gold);border-radius:50%;animation:beaconPulse 2.1s ease-in-out infinite}
+.beacon i{width:8px;height:8px;border-radius:50%;background:var(--gold);animation:dotPulse 1.8s ease-in-out infinite}
 .status .txt{display:grid;line-height:1.35}
 .tagline{color:var(--ac);font:700 10px/1.4 "Fraunces",Georgia,serif;letter-spacing:.16em;text-transform:uppercase}
 .status b{font:600 13px/1.4 "Fraunces",Georgia,serif;color:var(--fg)}
 .status small{color:var(--mut);font-size:11px}
+@keyframes statusIn{0%{opacity:0;transform:translateY(18px) scale(.98)}100%{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes beaconPulse{0%,100%{box-shadow:0 0 0 0 rgba(173,129,59,.35)}50%{box-shadow:0 0 0 8px rgba(173,129,59,0)}}
+@keyframes dotPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.45);opacity:.8}}
 .hero-portrait{width:100%;max-width:470px;margin-left:auto}
 .portrait{position:relative;display:grid;place-items:center;aspect-ratio:.78;overflow:hidden;background:linear-gradient(145deg,#d7d2ca,#f5f0e8 62%,#c9bfb2);border-radius:7px;box-shadow:0 18px 45px rgba(65,47,31,.14)}
 .portrait::after{position:absolute;inset:0;border:1px solid rgba(255,255,255,.5);content:"";pointer-events:none}
@@ -94,7 +97,7 @@ footer{background:var(--chrome);border-top:2px solid var(--bd);padding:56px 0 24
 <div class="hero-copy">
 <p class="spread"><b>P</b><b>O</b><b>R</b><b>T</b><b>F</b><b>O</b><b>L</b><b>I</b><b>O</b></p>
 <h1 class="sig" aria-label="Edward Nicholas Adidjaja"><span class="a">Edward</span><span class="b">Nicholas Adidjaja</span></h1>
-<p class="role">Computer Science student at Bina Nusantara University Alam Sutera<i>| AI Track |</i> Frontend Development, UI/UX Designer, &amp; Machine Learning</p>
+<p class="role">Computer Science student at Bina Nusantara University Alam Sutera<i>| AI Track |</i> Frontend Development &amp; Machine Learning</p>
 <div class="status"><span class="beacon"><i></i></span><div class="txt"><span class="tagline">Open to opportunities</span><b>Internships and project collaborations</b><small>Currently studying Computer Science at BINUS University</small></div></div>
 </div>
 <div class="hero-portrait"><div class="portrait"><span class="portrait-fallback" aria-hidden="true">EN</span><img src="image/image_2.jpeg" alt="Edward Nicholas Adidjaja" onerror="this.remove()"></div><p class="cap">Tangerang, Banten, Indonesia</p></div>
