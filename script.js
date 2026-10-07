@@ -66,14 +66,6 @@ const PROJECTS = [
     desc: 'A comprehensive travel information system built to streamline route searching, destination browsing, and overall trip planning.',
     tags: ['Web', 'Full-stack'],
     url: 'https://github.com/Edward-NA/VSTravel'
-  },
-  {
-    name: 'H.A.N.A.F.I',
-    type: 'Role',
-    role: 'Deployment',
-    desc: 'A predictive healthcare model designed to estimate mortality rates by analyzing critical medical and demographic patient data.',
-    tags: ['Healthcare', 'Prediction'],
-    url: 'https://github.com/Edward-NA/HANAFI'
   }
 ];
 
