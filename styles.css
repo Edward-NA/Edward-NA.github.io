@@ -85,11 +85,10 @@ h2{font:600 30px/1.2 "Fraunces",Georgia,serif;margin:0 0 20px}
 .links a{font-size:14px;margin-right:14px;font-weight:600}
 .role{font-size:13px;color:var(--ac);margin-bottom:8px}
 .project-showcase{overflow:hidden;border-top:1px solid var(--bd)}
-.project-showcase h2{margin:0 0 12px;text-align:center;color:var(--fg);font:700 clamp(28px,3vw,40px)/1.15 "Space Grotesk",sans-serif}
+.project-showcase .capabilities-heading{margin:0 0 12px}
 .project-stage{position:relative;max-width:1080px;height:690px;margin:0 auto}
 .project-stage .grid{position:relative;display:block;height:100%;overflow:hidden;padding:0;touch-action:pan-y}
 .project-stage .card{position:absolute;top:50%;left:50%;width:min(600px,84vw);height:500px;overflow:hidden;margin:0;padding:18px;display:flex;flex-direction:column;border:1px solid var(--bd);border-radius:12px;background:var(--card);box-shadow:0 10px 26px rgba(41,38,34,.12);transition:transform .55s cubic-bezier(.2,.8,.2,1),opacity .45s,filter .45s,border-color .3s}
-.project-image-placeholder{height:220px;flex:0 0 220px;display:grid;place-items:center;margin-bottom:14px;border:1px dashed var(--bd);border-radius:7px;background:var(--chrome);color:var(--mut);font:600 13px/1.3 "Space Grotesk",sans-serif}
 .project-stage .card h3{margin:0 0 6px;color:var(--fg);font:700 21px/1.25 "Space Grotesk",sans-serif}
 .project-stage .card .role{margin:0 0 8px;color:var(--ac);font:600 13px/1.4 "Source Serif 4",Georgia,serif}
 .project-stage .card p{flex:1;margin:0 0 12px;color:var(--mut);font:400 14px/1.5 "Source Serif 4",Georgia,serif}
